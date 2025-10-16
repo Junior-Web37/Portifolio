@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Multimédia - Ultra Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/Css.css">
+</head>
+<body>
+    <!-- Efeito de partículas premium no background -->
+    <div class="particles-premium" id="particles-premium"></div>
+
+    <!-- Botão de voltar ao topo premium -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <header id="header">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-camera-retro"></i>
+                <span>Celestino Júnior</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#multimedia">Multimédia</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Bem-vindo ao Meu Mundo <span class="typewriter-premium">Criativo</span></h1>
+                <p>Descubra uma fusão única de imagens, sons e experiências visuais com qualidade premium</p>
+                <a href="#gallery" class="btn glow-premium">Explorar Galeria <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2><i class="fas fa-user"></i> Elementos Multimédia</h2>
+            
+            <div class="profile-with-audio">
+                <img src="Imagens/Capturar.PNG" alt="Imagem de Perfil" class="profile-img glow-premium">
+                
+                <div class="audio-container glow-premium">
+                    <h3><i class="fas fa-music"></i> Reprodutor de Áudio</h3>
+                    <audio controls>
+                        <source src="Audio/06. Laylizzy, Mark Exodus, Hernâni - KALASHINLOVE_ TOU A VIR_ DEDOS DE TWITTER.mp3" type="audio/mpeg">
+                    </audio>
+                    <p>Este é um reprodutor de áudio HTML5. O atributo "controls" adiciona os botões de play, pause e controle de volume.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="multimedia">
+            <h2><i class="fas fa-play-circle"></i> Elementos Multimédia</h2>
+            
+            <div class="media-grid">
+                <div class="media-card glow-premium">
+                    <h3><i class="fas fa-video"></i> Vídeo 1</h3>
+                    <video controls>
+                        <source src="Videos/2.mp4" type="video/mp4">                  
+                    </video>
+                    <p>Este é um reprodutor de vídeo HTML5. O atributo "controls" adiciona os controles de reprodução.</p>
+                </div>
+                
+                <div class="media-card glow-premium">
+                    <h3><i class="fas fa-video"></i> Vídeo 2</h3>
+                    <video controls>
+                        <source src="Videos/20250531_184656.mp4" type="video/mp4">                  
+                    </video>
+                    <p>Vídeo com controles de reprodução e opção de tela cheia.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2><i class="fas fa-desktop"></i> Conteúdo Externo Incorporado</h2>
+            <p>Exemplo de incorporação de conteúdo externo usando iframe:</p>
+            
+            <div class="iframe-container glow-premium">
+                <iframe src="https://getbootstrap.com/docs/5.3/components/card/" title="Conteúdo externo incorporado" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section id="gallery">
+            <h2><i class="fas fa-images"></i> Galeria de Imagens</h2>
+            <p>Clique em qualquer imagem para visualizá-la em tela cheia:</p>
+            
+            <div class="gallery">
+                <div class="gallery-item glow-premium" onclick="openModal('Imagens/2.jpg')">
+                    <img src="Imagens/2.jpg" alt="Imagem 2" class="gallery-img">
+                    <div class="gallery-caption">Imagem 2</div>
+                </div>
+                
+                <div class="gallery-item glow-premium" onclick="openModal('Imagens/3.jpg')">
+                    <img src="Imagens/3.jpg" alt="Imagem 3" class="gallery-img">
+                    <div class="gallery-caption">Imagem 3</div>
+                </div>
+                
+                <div class="gallery-item glow-premium" onclick="openModal('Imagens/4.jpg')">
+                    <img src="Imagens/4.jpg" alt="Imagem 4" class="gallery-img">
+                    <div class="gallery-caption">Imagem 4</div>
+                </div>
+                
+                <div class="gallery-item glow-premium" onclick="openModal('Imagens/5.jpg')">
+                    <img src="Imagens/5.jpg" alt="Imagem 5" class="gallery-img">
+                    <div class="gallery-caption">Imagem 5</div>
+                </div>
+                
+                <div class="gallery-item glow-premium" onclick="openModal('Imagens/1.jpg')">
+                    <img src="Imagens/1.jpg" alt="Imagem 1" class="gallery-img">
+                    <div class="gallery-caption">Imagem 1</div>
+                </div>
+                
+                <div class="gallery-item glow-premium" onclick="openModal('Imagens/7.jpg')">
+                    <img src="Imagens/7.jpg" alt="Imagem 7" class="gallery-img">
+                    <div class="gallery-caption">Imagem 7</div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2><i class="fas fa-question-circle"></i> Questões sobre Multimédia em HTML</h2>
+            
+            <div class="qa-section glow-premium">
+                <div class="question" onclick="toggleAnswer(this)"><i class="fas fa-question"></i> 1. Quais os outros atributos da tag &lt;audio&gt; e qual é a função de cada?</div>
+                <div class="answer">
+                    <p>Além de "controls" e "src", a tag &lt;audio&gt; possui:</p>
+                    <ul>
+                        <li><strong>autoplay</strong>: Inicia a reprodução automaticamente (não recomendado)</li>
+                        <li><strong>loop</strong>: Faz o áudio repetir continuamente</li>
+                        <li><strong>muted</strong>: Silencia o áudio por padrão</li>
+                        <li><strong>preload</strong>: Define como o áudio deve ser carregado (auto, metadata, none)</li>
+                    </ul>
+                </div>
+                
+                <div class="question" onclick="toggleAnswer(this)"><i class="fas fa-question"></i> 2. Quais os outros atributos da tag &lt;video&gt; e qual é a função de cada?</div>
+                <div class="answer">
+                    <p>Além dos atributos comuns ao áudio, a tag &lt;video&gt; possui:</p>
+                    <ul>
+                        <li><strong>poster</strong>: Define uma imagem para ser exibida antes do vídeo ser reproduzido</li>
+                        <li><strong>width</strong> e <strong>height</strong>: Define as dimensões do player de vídeo</li>
+                    </ul>
+                </div>
+                
+                <div class="question" onclick="toggleAnswer(this)"><i class="fas fa-question"></i> 3. Quais os outros atributos da tag &lt;iframe&gt; e qual é a função de cada?</div>
+                <div class="answer">
+                    <p>Além de "src", a tag &lt;iframe&gt; possui:</p>
+                    <ul>
+                        <li><strong>width</strong> e <strong>height</strong>: Define as dimensões do iframe</li>
+                        <li><strong>title</strong>: Fornece um título para acessibilidade</li>
+                        <li><strong>allowfullscreen</strong>: Permite que o conteúdo seja exibido em tela cheia</li>
+                        <li><strong>frameborder</strong>: Define se há borda (0 para sem borda)</li>
+                        <li><strong>sandbox</strong>: Aplica restrições de segurança ao conteúdo incorporado</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <h2>Contactos</h2>
+        <p>Entre em contacto através das seguintes plataformas:</p>
+        
+        <div class="social-links">
+            <a href="#" class="glow-premium"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="glow-premium"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="glow-premium"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="glow-premium"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        
+        <p>&copy; 2023 Celestino Júnior. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modal para visualização de imagens -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="JS/Js.js"></script>
+</body>
+</html>

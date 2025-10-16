@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+h1 {
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+form, fieldset {
+    background-color: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+.radio-group, .checkbox-group {
+    margin: 10px 0;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+button[type="reset"] {
+    background-color: #6c757d;
+}
+button[type="reset"]:hover {
+    background-color: #545b62;
+}
+fieldset {
+    border: 2px solid #007bff;
+}
+legend {
+    font-weight: bold;
+    color: #007bff;
+    padding: 0 10px;
+}
+.step {
+    display: none;
+}
+.step.active {
+    display: block;
+}
+.step-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
