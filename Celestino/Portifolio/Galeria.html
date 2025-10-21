@@ -6,6 +6,7 @@
     <title>Meu Portfólio Multimédia - Ultra Premium</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="CSS/Css.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!-- Efeito de partículas premium no background -->
@@ -26,6 +27,7 @@
                 <ul>
                     <li><a href="#home">Início</a></li>
                     <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#charts">Gráficos</a></li>
                     <li><a href="#multimedia">Multimédia</a></li>
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#contact">Contacto</a></li>
@@ -127,6 +129,48 @@
             </div>
         </section>
         
+        <!-- NOVA SEÇÃO: GRÁFICOS -->
+        <section id="charts">
+            <h2><i class="fas fa-chart-bar"></i> Gráficos Interativos</h2>
+            <p>Visualizações de dados com gráficos interativos criados com Chart.js:</p>
+            
+            <div class="charts-container">
+                <div class="chart-grid">
+                    <div class="chart-card glow-premium">
+                        <h3><i class="fas fa-chart-pie"></i> Distribuição de Tempo</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                        <p>Como distribuo meu tempo entre diferentes atividades criativas.</p>
+                    </div>
+                    
+                    <div class="chart-card glow-premium">
+                        <h3><i class="fas fa-chart-line"></i> Crescimento de Seguidores</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                        <p>Evolução do meu público nas redes sociais ao longo do tempo.</p>
+                    </div>
+                    
+                    <div class="chart-card glow-premium">
+                        <h3><i class="fas fa-chart-bar"></i> Tipos de Conteúdo</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                        <p>Distribuição dos diferentes tipos de conteúdo que produzo.</p>
+                    </div>
+                    
+                    <div class="chart-card glow-premium">
+                        <h3><i class="fas fa-chart-area"></i> Engajamento por Plataforma</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                        <p>Comparação do engajamento do público em diferentes plataformas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section>
             <h2><i class="fas fa-question-circle"></i> Questões sobre Multimédia em HTML</h2>
             
@@ -177,7 +221,7 @@
             <a href="#" class="glow-premium"><i class="fab fa-linkedin-in"></i></a>
         </div>
         
-        <p>&copy; 2023 Celestino Júnior. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Celestino Júnior. Todos os direitos reservados.</p>
     </footer>
 
     <!-- Modal para visualização de imagens -->
@@ -187,5 +231,155 @@
     </div>
 
     <script src="JS/Js.js"></script>
+    <script>
+        // Inicializar gráficos quando a página carregar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gráfico de Pizza
+            const pieCtx = document.getElementById('pieChart').getContext('2d');
+            const pieChart = new Chart(pieCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Fotografia', 'Design Gráfico', 'Edição de Vídeo', 'Desenvolvimento Web', 'Redes Sociais'],
+                    datasets: [{
+                        data: [30, 20, 25, 15, 10],
+                        backgroundColor: [
+                            'rgba(110, 72, 170, 0.8)',
+                            'rgba(157, 80, 187, 0.8)',
+                            'rgba(255, 107, 107, 0.8)',
+                            'rgba(45, 52, 54, 0.8)',
+                            'rgba(245, 245, 245, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(110, 72, 170, 1)',
+                            'rgba(157, 80, 187, 1)',
+                            'rgba(255, 107, 107, 1)',
+                            'rgba(45, 52, 54, 1)',
+                            'rgba(245, 245, 245, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Distribuição do Tempo'
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de Linha
+            const lineCtx = document.getElementById('lineChart').getContext('2d');
+            const lineChart = new Chart(lineCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Seguidores (milhares)',
+                        data: [12, 19, 15, 25, 22, 30, 35, 40, 45, 50, 55, 60],
+                        backgroundColor: 'rgba(110, 72, 170, 0.2)',
+                        borderColor: 'rgba(110, 72, 170, 1)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Crescimento de Seguidores'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de Barras
+            const barCtx = document.getElementById('barChart').getContext('2d');
+            const barChart = new Chart(barCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Fotos', 'Vídeos', 'Designs', 'Artigos', 'Tutoriais'],
+                    datasets: [{
+                        label: 'Quantidade de Conteúdo',
+                        data: [65, 59, 80, 81, 56],
+                        backgroundColor: [
+                            'rgba(110, 72, 170, 0.8)',
+                            'rgba(157, 80, 187, 0.8)',
+                            'rgba(255, 107, 107, 0.8)',
+                            'rgba(45, 52, 54, 0.8)',
+                            'rgba(245, 245, 245, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(110, 72, 170, 1)',
+                            'rgba(157, 80, 187, 1)',
+                            'rgba(255, 107, 107, 1)',
+                            'rgba(45, 52, 54, 1)',
+                            'rgba(245, 245, 245, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Tipos de Conteúdo Produzido'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de Radar
+            const radarCtx = document.getElementById('radarChart').getContext('2d');
+            const radarChart = new Chart(radarCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Instagram', 'Facebook', 'Twitter', 'YouTube', 'LinkedIn', 'TikTok'],
+                    datasets: [{
+                        label: 'Engajamento',
+                        data: [65, 59, 90, 81, 56, 55],
+                        backgroundColor: 'rgba(110, 72, 170, 0.2)',
+                        borderColor: 'rgba(110, 72, 170, 1)',
+                        pointBackgroundColor: 'rgba(110, 72, 170, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(110, 72, 170, 1)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Engajamento por Plataforma'
+                        }
+                    },
+                    scales: {
+                        r: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
