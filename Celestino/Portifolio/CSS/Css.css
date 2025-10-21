@@ -930,4 +930,27 @@ footer::before {
         width: 40px;
         height: 40px;
     }
+
+}
+
+/* CSS para gráficos menores */
+.chart-wrapper {
+    width: 100%;
+    height: 250px; /* Diminuído de 300px */
+    margin: 15px 0;
+    position: relative;
+}
+
+/* Para gráficos ainda menores */
+.chart-wrapper.small {
+    height: 200px;
+}
+
+.chart-wrapper.very-small {
+    height: 150px;
+}
+
+/* Ajustar o tamanho dos textos nos gráficos menores */
+.chart-wrapper.small canvas {
+    font-size: 12px !important;
 }
